@@ -10,7 +10,38 @@ body {
     text-align: center;
 }
 h1{
-    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem auto 0;
+    color: #f8fafc;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 650;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 12px rgb(0 0 0 / 25%);
+}
+.game-logo{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 1px solid rgb(255 255 255 / 18%);
+    border-radius: 0.8rem;
+    background: linear-gradient(145deg, #374151, #1f2937);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 25%);
+    font-size: 1.15rem;
+    letter-spacing: 0;
+    text-shadow: none;
+}
+.game-logo span:first-child{
+    color: #f87171;
+}
+.game-logo span:last-child{
+    color: #60a5fa;
 }
 .container{
     height: 70vh;
@@ -37,12 +68,79 @@ h1{
     border: none;
     box-shadow: 0 0 0.5rem black;
     font-size: 8vmin;
-    color:black;
+    background-color: #ffff;
+    
 }
-.reset{
-    padding: 1rem;
-    border-radius: 1rem;
+.reset,
+.newbtn{
+    padding: 0.85rem 1.4rem;
+    border-radius: 0.8rem;
     border: none;
-    background-color: rgb(224, 44, 44);
     color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 25%);
+    transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+}
+
+.reset{
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.newbtn{
+    background: linear-gradient(135deg, #22c55e, #15803d);
+}
+
+.reset:hover,
+.newbtn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgb(0 0 0 / 30%);
+    filter: brightness(1.08);
+}
+
+.reset:active,
+.newbtn:active{
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 25%);
+}
+
+.reset:focus-visible,
+.newbtn:focus-visible{
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+#msg{
+    color: #ffff;
+    font-size: 5vmin;
+
+}
+
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vmin;
+    
+}
+.hide {
+    display: none;
+}
+
+.credit{
+    margin: 2rem auto 1rem;
+    padding-top: 0.9rem;
+    width: min(90%, 24rem);
+    border-top: 1px solid rgb(255 255 255 / 15%);
+    color: #b8bec8;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+}
+
+.credit span{
+    color: #f3f4f6;
+    font-weight: 600;
 }
